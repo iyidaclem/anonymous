@@ -1,0 +1,1 @@
+<div style="width: 100%; padding:20px 0px; text-align:center"> CopyRight Nerobase 2022</div>

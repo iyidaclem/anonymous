@@ -2,6 +2,7 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Models\Messages;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Auth;
@@ -52,9 +53,10 @@ class AuthController extends Controller
         $user = User::where('email', $request['email'])->firstOrFail();
 
         $token = $user->createToken('auth_token')->plainTextToken;
+        $messages = Messages::where('user_id',$user->user_id)->get();
 
         return response()
-            ->json(['status' => true, 'data' =>['access_token' => $token, 'token_type' => 'Bearer']]);
+            ->json(['status' => true, 'data' =>['access_token' => $token, 'token_type' => 'Bearer'], 'messages' => $messages]);
     }
 
     // method for user logout and delete token

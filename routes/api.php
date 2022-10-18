@@ -31,12 +31,19 @@ Route::post('/forgot-password', [App\Http\Controllers\API\ForgetPasswordControll
 
 // addNewPassword
 Route::post('/new-password', [App\Http\Controllers\API\ForgetPasswordController::class, 'newPassword']);
+
+// Post Message 
+Route::post('/send-message', [App\Http\Controllers\API\MessageController::class, 'sendMessage']);
+
 //Protecting Routes
 Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::get('/profile', function(Request $request) {
+    Route::get('/profile', function (Request $request) {
         return auth()->user();
     });
 
     // API route for logout user
     Route::post('/logout', [App\Http\Controllers\API\AuthController::class, 'logout']);
+
+    // Fetch Message
+    Route::post('/fetch-message', [App\Http\Controllers\API\MessageController::class, 'fetchMessage']);
 });

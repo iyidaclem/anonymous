@@ -1,3 +1,5 @@
-* {
-    /* color:red; */
+
+body, html {
+    padding: 0;
+    overflow-x: hidden;
 }

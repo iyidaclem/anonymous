@@ -1,0 +1,69 @@
+@import url(../css/fonts/flaticon/font/Flaticon.ttf);
+@import url(/css/fonts/icomoon/fonts/icomoon1a44.eot);
+.header-area{position: fixed;
+width: 100%;
+z-index: 100000;
+background-image: url(../images/ccc1.jpg);
+background-repeat: no-repeat;
+}
+     /*  navbar area    */
+
+.sub{margin-top: 30%;}
+@media(max-width:991px){
+
+        .form-control{width: 100% !important;}
+        .btn{margin-left: 5%;
+            background-color: rgba(6, 247, 247, 0.603) !important;
+        margin-top: 10%;}
+        .text-btn{margin-left: 20%;}
+
+.input-group-append2{display: flex;
+    margin-left: -7% !important;
+    margin-top: -7%;}
+    .header-area{width: 100%;}
+    h2{font-size: 20px;
+    text-align: center;}
+
+}
+/*  end navbar area    */
+         /*main-area*/
+
+         .b{margin-top: -1%;}
+
+.h{font-size: 1.5rem;
+    font-family: Lobster Two;
+    font-weight: 700;}
+         .main{display: row;
+        margin-top: 10%;}
+  .w{
+    box-shadow: 0px 10px 30px rgb(2, 4, 114);
+  }     
+     .p{font-size: 1.5rem;
+        font-family: Lobster Two;
+        font-weight: 700;}
+    
+.type{margin-top: -5%;
+margin-left: 130%;}
+         /*end main-area*/
+        
+.input-group-append2{display: flex;
+margin-left: 60%;
+margin-top: -7%;}
+.input-group-append{display: flex;}
+.btn{
+    background-color: rgba(1, 11, 48, 0.729) !important;
+}
+
+
+.note-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.note-list span{
+    display: flex;
+    flex-direction: row;
+}
+
+.form{margin-top: -30%;}

@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+<div class="container pb-5">
+    <div class="row justify-content-center pb-5">
+        <div class="col-md-8 pb-5">
+            <div class="card pb-5">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 @if (session('success'))

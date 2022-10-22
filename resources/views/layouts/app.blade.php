@@ -11,11 +11,13 @@
     <!-- site metas -->
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="keywords" content="lolnews">
+    <meta name="description" content="lolnews">
     <meta name="author" content="">
+    <link rel="shortcut icon" href="{{ url('images/LOL.png') }}">
     <!-- bootstrap css -->
     <link rel="stylesheet" href="{{ url('css/bootstrap.min.css') }}">
     <!-- style css -->
@@ -25,7 +27,7 @@
     <!-- fevicon -->
     <link rel="icon" href="{{ url('images/fevicon.png" type="image/gif ') }} "/>
     <!-- Scrollbar Custom CSS -->
-    <link rel="stylesheet" href="{{ url('/') . 'css/jquery.mCustomScrollbar.min.css' }}">
+    <link rel="stylesheet" href="{{ url('/') . '/css/jquery.mCustomScrollbar.min.css' }}">
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"

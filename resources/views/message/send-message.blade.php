@@ -9,7 +9,7 @@
             <div class="col-md-6 offset-md-3">
                 @if(session('success'))
                 <p class="alert alert-success p-5"> {{ session('success') }} 
-                Get you own link to start recieving messages <a href="/home"><button class="btn btn-info">Get Link</button></a>
+                Get your own link to start recieving messages <a href="/home"><button class="btn btn-info">Get Link</button></a>
                 </p>
 
                 @else

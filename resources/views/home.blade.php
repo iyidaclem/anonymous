@@ -18,7 +18,7 @@
                         @endif
 
                         <div class="alert alert-info text-center">
-                             Your Link: <span id="mylink">{{ request()->getHost() . '/send/' . auth()->user()->user_id }}</span> <br>
+                             Your Link: <span id="mylink">{{ "https://".request()->getHost() . '/send/' . auth()->user()->user_id }}</span> <br>
                             <button id="copy_link"  onclick="copyLink()" class="btn btn-primary   m-1 w-50"><i class="bi bi-clipboard"></i> Copy</button>
                             <button id="share_link" onclick="shareLink()" class="btn btn-primary   m-1 w-50"><i class="bi bi-share"></i> Share</button>
                         </div>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Messages;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $messages = Messages::select("*")->where("user_id", auth()->user()->user_id)->get();
+        return view('home')->with("messages", $messages);
     }
 }

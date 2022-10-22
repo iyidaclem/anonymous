@@ -373,11 +373,13 @@ border-radius: 10px;
 /*--------------------------------------------------------------------- layout new css ---------------------------------------------------------------------*/
 
 .header {
-     width: 100%;
-     background: transparent;
+     width: 100vw;
+     background:url(../images/banner.png);
+     /* background: transparent;*/
      padding: 20px 30px;
      position: absolute;
-     z-index: 999;
+     margin-bottom: 10%;
+     z-index: 999; 
 }
 
 .logo a {
@@ -397,16 +399,17 @@ border-radius: 10px;
 
 .banner_main {
 background:url(../images/banner.png);
-padding: 10%;
-display: flex;
-align-items: center;
-background-repeat: no-repeat;
 background-size: cover;
-background-position: center;   
-margin : -5% 0% 0% -1.5%;
-width: 100vw;
+width: 110vw;
+margin-left: -3vw;
+padding: 5vw;
+margin-top: -5%;
+
 }
 
+nav{
+     margin-left: 100px;
+}
 .text-bg {
 text-align: left;
 text-align: left;
@@ -901,5 +904,34 @@ right: 0;
      ;
 }
 
+.msg {
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     padding: 10px;
+     text-align: center;
+}
+
+@media screen and (max-width: 967px){
+     .main{
+          padding-top: 25!important;
+     
+}
+
+@media screen and (max-width: 769px){
+     .main{
+          padding-top: 30%!important;
+     }
+}
+
+@media screen and (max-width: 425px){
+     .main{
+          padding-top: 35%!important;
+     }
+}
+
+@media screen and (max-width: 320px){
+     .main{
+          padding-top: 55%!important;
+     }
+}
 
 /** end footer **/

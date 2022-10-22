@@ -23,15 +23,6 @@ Route::get('/docs', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/send/{user_id}', [App\Http\Controllers\MessageController::class, 'index'])->name('send');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/send-message', [App\Http\Controllers\MessageController::class, 'sendMessage'])->name('send-message');

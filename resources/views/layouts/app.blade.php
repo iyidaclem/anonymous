@@ -17,13 +17,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- bootstrap css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url('css/bootstrap.min.css') }}">
     <!-- style css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ url('css/style.css') }}">
     <!-- Responsive-->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="{{ url('css/responsive.css') }}">
     <!-- fevicon -->
-    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <link rel="icon" href="{{ url('images/fevicon.png" type="image/gif ') }} "/>
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="{{ url('/') . 'css/jquery.mCustomScrollbar.min.css' }}">
     <!-- Tweaks for older IEs-->
@@ -32,13 +32,17 @@
         media="screen">
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="{{ url('/fonts.gstatic.com') }}">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
 
+    {{-- bootstrap icons --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    
 
 </head>
 
@@ -49,22 +53,20 @@
     </div>
     <!-- end loader -->
     <!-- header -->
-    <header class="banner_main">
         <!-- header inner -->
-        <div class="header">
-            <div class="container-fluid">
+            <div class="container-fluid header">
                 <div class="row">
-                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col">
                         <div class="full">
-                            <div class="center-desk">
-                                <a href="/">
-                                    <h1 class="te"><img width="100" src="images/LOL.png" alt="">NEWS</h1>
+                            <div class="">
+                                <a href="{{ url('') }}">
+                                    <h1 class="te"><img width="100" src="{{url('/').'/images/LOL.png'}}" alt="">NEWS</h1>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9" style="margin-top:-10%">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12" style="margin-top:-10%">
                     <nav class="navigation navbar navbar-expand-md navbar-dark mr-5">
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
@@ -74,22 +76,34 @@
                         <div class="collapse navbar-collapse" id="navbarsExample04">
                             <ul class="navbar-nav text-center mr-auto">
                                 @guest
-                                <li class="nav-item" href="/login">
-                                    <button class="btn btn-warning text-primary"><a class="nav-link  login-btn"
-                                            href="{{ url('/login') }}">Log in</a> </button>
+                                    <li class="nav-item" href="{{ url('login') }}">
+                                        <button class="btn btn-warning text-primary"><a class="nav-link  login-btn"
+                                                href="{{ url('/login') }}">Log in</a> </button>
+                                    </li>
+                                    <li class="nav-item" href="{{ url('login') }}">
+                                        <button class="btn btn-warning text-primary"><a class="nav-link  login-btn"
+                                                href="{{ url('/register') }}">Register</a> </button>
+                                    </li>
+                                @else
+                                
+                                <li class="nav-item" >
+                                        <button class="btn btn-danger text-primary"><a class="nav-link  login-btn"
+                                              href="{{ url('home') }}"  >Dashboard</a> </button>
+                                                
                                 </li>
-                                <li class="nav-item" href="/login">
-                                    <button class="btn btn-warning text-primary"><a class="nav-link  login-btn"
-                                            href="{{ url('/register') }}">Register</a> </button>
-                                </li>
+                                    <li class="nav-item" href="{{ url('login') }}">
+                                        <form action=" {{ route('logout') }} " method="post">
+                                            <button class="btn btn-danger text-primary"><a class="nav-link  login-btn"
+                                                    >Logout</a> </button>
+                                                    @csrf
+                                        </form>
+                                    </li>
                                 @endguest
                             </ul>
                         </div>
                     </nav>
                 </div>
             </div>
-        </div>
-    </header>
 
     {{-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -148,14 +162,14 @@
             </div>
         </nav> --}}
 
-    <main class="py-4">
+    <main class="main" style="padding-top: 10%">
         @yield('content')
     </main>
-    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/{{ url('/') }}js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
     </script>
-    <footer>
+    <footer style="margin-top: 300px;">
         <div class="footer">
             <div class="container">
                 <div class="row">
@@ -193,7 +207,7 @@
     <script src="{{ url('/') . '/js/jquery.mCustomScrollbar.concat.min.js' }}"></script>
     <script src="{{ url('/') . '/js/custom.js' }}"></script>
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-
+    <script src="{{ url('js/main.js') }}"></script>
 </body>
 
 </html>

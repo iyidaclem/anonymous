@@ -169,7 +169,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="carousel-item">
+                                        {{-- <div class="carousel-item">
                                             <div class="container">
                                                 <div class="carousel-caption">
                                                     <div class="row">
@@ -191,7 +191,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                     <a class="carousel-control-prev" href="#myCarousel" role="button"
                                         data-slide="prev">

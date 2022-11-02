@@ -212,6 +212,9 @@
     <script src="{{ url('/') . '/js/custom.js' }}"></script>
     <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
     <script src="{{ url('js/main.js') }}"></script>
+
+    {{-- propellAds --}}
+    <script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://inklinkor.com/tag.min.js',5488612,document.body||document.documentElement)</script>
 </body>
 
 </html>

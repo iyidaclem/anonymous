@@ -11,6 +11,8 @@
     <!-- site metas -->
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{-- propellAds --}}
+    <meta name="propeller" content="9d3060fbaa6917f931e1b71cb1890ae2">
     
 
     <title>{{ config('app.name', 'Laravel') }}</title>
